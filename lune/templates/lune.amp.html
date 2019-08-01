@@ -42,43 +42,18 @@ limitations under the License.
 </head>
   <body class="lune">
    <!-- Configure analytics to use gtag -->
-<amp-analytics type="googleanalytics">
-
-    <script type="application/json">
-        {
-            "vars": {
-                "account": "UA-144288741-1"
-            },
-            "extraUrlParams": {
-                "cd45": "AMP"
-            },
-            "triggers": {
-                "trackPageview": {
-                    "on": "visible",
-                    "request": "pageview"
-                },
-                "trackEvent" : {
-                    "on": "visible",
-                    "request": "event",
-                    "vars": {
-                        "eventCategory": "DeatilPage",
-                        "eventAction": "Detail",
-                        "eventLabel": "NewsDetailView",
-                        "eventValue": 1
-                    },
-                    "extraUrlParams":{
-                        "pa": "detail",
-                        "pal":"Tech & Sci",
-                        "pr1id":"IIBbY43blm",
-                        "pr1nm":"Japan startup fails to launch rocket into outer space",
-                        "pr1ca":"Tech & Sci",
-                        "pr1va":"2019.07.29 13:00 GMT+8",
-                        "pr1ps":1
-                    }
-                }
-            }
-        }
-    </script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<amp-analytics type="gtag" data-credentials="include">
+<script type="application/json">
+{
+  "vars" : {
+    "gtag_id": "UA-144288741-1",
+    "config" : {
+      "UA-144288741-1": { "groups": "default" }
+    }
+  }
+}
+</script>
 </amp-analytics>
 
     <!-- The clipPath is used in the CSS `clip-path` property; it's used to achieve a
